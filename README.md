@@ -65,5 +65,10 @@ kanban-board/
 - User authentication
 - Backend integration
 
+## Live Demo
+```bash
+https://shreya-1416.github.io/Syntecxhub_Kanban_Board/
+```
+
 ## Author
 Shreya Gupta
