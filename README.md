@@ -51,7 +51,7 @@ kanban-board/
 
 ## UI Highlights
 
-Soft pastel gradient background
+- Soft pastel gradient background
 - Rounded modern cards
 - Hover animations
 - Smooth interactions
