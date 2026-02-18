@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kanban Board</title>
+
+  <!-- Cute Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🌸 NAVBAR -->
+<header class="navbar">
+  <h2 class="logo">Kanban Board</h2>
+  <input type="text" placeholder="Search for tasks..." oninput="searchTasks(this.value)">
+  <div class="profile">👤</div>
+  <button class="theme-toggle" onclick="toggleDarkMode()">🌙</button>
+</header>
+
+<!-- 🧸 BOARD -->
+<main class="board">
+
+  <!-- BACKLOG -->
+  <div class="column">
+    <div class="column-header backlog">🗂 Backlog</div>
+    <div class="task-list" id="todo"></div>
+
+    <button onclick="showInput('todo')">+ Add task</button>
+
+    <div class="add-task-box" id="input-todo">
+      <input type="text" placeholder="Write a task..." />
+      <div class="priority-options">
+        <button data-priority="Low" onclick="setPriority(this)">Low</button>
+        <button data-priority="Medium" onclick="setPriority(this)">Medium</button>
+        <button data-priority="High" onclick="setPriority(this)">High</button>
+      </div>
+      <div class="add-actions">
+        <button onclick="addTaskInline('todo')">Add</button>
+        <button onclick="hideInput('todo')">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- IN PROGRESS -->
+  <div class="column">
+    <div class="column-header progress">🚧 In Progress</div>
+    <div class="task-list" id="doing"></div>
+
+    <button onclick="showInput('doing')">+ Add task</button>
+
+    <div class="add-task-box" id="input-doing">
+      <input type="text" placeholder="Write a task..." />
+      <div class="priority-options">
+        <button data-priority="Low" onclick="setPriority(this)">Low</button>
+        <button data-priority="Medium" onclick="setPriority(this)">Medium</button>
+        <button data-priority="High" onclick="setPriority(this)">High</button>
+      </div>
+      <div class="add-actions">
+        <button onclick="addTaskInline('doing')">Add</button>
+        <button onclick="hideInput('doing')">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- REVIEW -->
+  <div class="column">
+    <div class="column-header review">🔍 Review</div>
+    <div class="task-list" id="review"></div>
+
+    <button onclick="showInput('review')">+ Add task</button>
+
+    <div class="add-task-box" id="input-review">
+      <input type="text" placeholder="Write a task..." />
+      <div class="priority-options">
+        <button data-priority="Low" onclick="setPriority(this)">Low</button>
+        <button data-priority="Medium" onclick="setPriority(this)">Medium</button>
+        <button data-priority="High" onclick="setPriority(this)">High</button>
+      </div>
+      <div class="add-actions">
+        <button onclick="addTaskInline('review')">Add</button>
+        <button onclick="hideInput('review')">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DONE -->
+  <div class="column">
+    <div class="column-header done">✅ Complete</div>
+    <div class="task-list" id="done"></div>
+
+    <button onclick="showInput('done')">+ Add task</button>
+
+    <div class="add-task-box" id="input-done">
+      <input type="text" placeholder="Write a task..." />
+      <div class="priority-options">
+        <button data-priority="Low" onclick="setPriority(this)">Low</button>
+        <button data-priority="Medium" onclick="setPriority(this)">Medium</button>
+        <button data-priority="High" onclick="setPriority(this)">High</button>
+      </div>
+      <div class="add-actions">
+        <button onclick="addTaskInline('done')">Add</button>
+        <button onclick="hideInput('done')">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
