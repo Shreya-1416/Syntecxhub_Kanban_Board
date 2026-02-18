@@ -52,26 +52,18 @@ kanban-board/
 ## UI Highlights
 
 Soft pastel gradient background
-
-Rounded modern cards
-
-Hover animations
-
-Smooth interactions
-
-Minimal and aesthetic design
+- Rounded modern cards
+- Hover animations
+- Smooth interactions
+- Minimal and aesthetic design
 
 ## Future Improvements
 
-Due dates
-
-Task sorting
-
-Drag animation effects
-
-User authentication
-
-Backend integration
+- Due dates
+- Task sorting
+- Drag animation effects
+- User authentication
+- Backend integration
 
 ## Author
 Shreya Gupta
